@@ -100,7 +100,7 @@ int main (int argc, const char * argv[])
         }
     }
 
-	(char *)src = (char *)argv[optind];
+	src = argv[optind];
 
 	//check if a correct number of arguments was submitted
     if (argc < 2 || src == NULL)
@@ -150,8 +150,8 @@ static int GetFileKindFromString (char *str)
 
 static int GenerateFileFromIcon (char *src, char *dst, int kind)
 {
-	NSString		*srcStr = [NSString stringWithCString: src];
-	NSString		*dstStr = [NSString stringWithCString: dst];
+	NSString		*srcStr = [NSString stringWithCString: src encoding: [NSString defaultCStringEncoding]];
+	NSString		*dstStr = [NSString stringWithCString: dst encoding: [NSString defaultCStringEncoding]];
 	NSData			*data = NULL;
 	NSDictionary	*dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:1.0] forKey:NSImageCompressionFactor];
 

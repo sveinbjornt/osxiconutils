@@ -96,11 +96,11 @@ int main (int argc, const char * argv[])
 		return EX_USAGE;
     }
 	
-	(char *)src = (char *)argv[optind];
+	src = (char *)argv[optind];
 
 	//get the icon
 	IconFamily *icon;
-	NSString *srcPath = [NSString stringWithCString: src];
+	NSString *srcPath = [NSString stringWithCString: src encoding: [NSString defaultCStringEncoding]];
 	
 	if (sourceIsIcns)
 	{
@@ -123,7 +123,7 @@ int main (int argc, const char * argv[])
 		icon = [IconFamily iconFamilyWithThumbnailsOfImage: image];
 		if (icon == NULL)
 		{
-			fprintf(stderr, "Failed to generate icon from image.\n", src);
+			fprintf(stderr, "Failed to generate icon from image.\n");
 			return EXIT_FAILURE;
 		}
 		
@@ -144,7 +144,7 @@ int main (int argc, const char * argv[])
     for (; optind < argc; ++optind)
 	{
 		BOOL isDir;
-		NSString *dstPath = [NSString stringWithCString: (char *)argv[optind]];
+		NSString *dstPath = [NSString stringWithCString: (char *)argv[optind] encoding: [NSString defaultCStringEncoding]];
 		
 		if ([[NSFileManager defaultManager] fileExistsAtPath: dstPath isDirectory: &isDir] && isDir)
 			[icon setAsCustomIconForDirectory: dstPath];

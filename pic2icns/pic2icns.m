@@ -37,8 +37,8 @@ int main (int argc, const char * argv[])
 	}
     
 	// get nsstrings from arguments
-	NSString *srcPath = [[NSString stringWithCString: argv[1]] stringByExpandingTildeInPath];
-	NSString *destPath = [[NSString stringWithCString: argv[2]] stringByExpandingTildeInPath];
+	NSString *srcPath = [[NSString stringWithCString: argv[1] encoding: [NSString defaultCStringEncoding]] stringByExpandingTildeInPath];
+	NSString *destPath = [[NSString stringWithCString: argv[2] encoding: [NSString defaultCStringEncoding]] stringByExpandingTildeInPath];
 	
 	// make sure source file exists
 	if (![fm fileExistsAtPath: srcPath])
@@ -61,7 +61,7 @@ int main (int argc, const char * argv[])
 	// make sure icon was created
 	if (![fm fileExistsAtPath: destPath])
 	{
-		fprintf(stderr, "Failed to create icon\n", argv[1]);
+		fprintf(stderr, "Failed to create icon\n");
 		return EXIT_FAILURE;
 	}
 	
