@@ -19,9 +19,9 @@
 */
 
 /*
-	0.3 - * code cleanup, use image feature
-	0.2 - * sysexits.h constants used as exit values
-	0.1 - * Initial release
+    0.3 - * code cleanup, use image feature
+    0.2 - * sysexits.h constants used as exit values
+    0.1 - * Initial release
 */
 
 #import <Cocoa/Cocoa.h>
@@ -36,27 +36,27 @@
 #include <errno.h>
 #include <sysexits.h>
 
-#define		PROGRAM_STRING  	"seticon"
-#define		VERSION_STRING		"0.3"
-#define		AUTHOR_STRING 		"Sveinbjorn Thordarson"
-#define		OPT_STRING			"vhdi" 
+#define PROGRAM_STRING      "seticon"
+#define VERSION_STRING        "0.3"
+#define AUTHOR_STRING         "Sveinbjorn Thordarson"
+#define OPT_STRING            "vhdi" 
 
 static void PrintVersion (void);
 static void PrintHelp (void);
 
 int main (int argc, const char * argv[]) 
 {
-    NSAutoreleasePool	*pool = [[NSAutoreleasePool alloc] init];
-	NSApplication		*app = [NSApplication sharedApplication];
+    NSAutoreleasePool   *pool = [[NSAutoreleasePool alloc] init];
+    NSApplication       *app = [NSApplication sharedApplication];
 
-	int					rc, optch;
-	char				*src;
-    static char			optstring[] = OPT_STRING;
+    int                 rc, optch;
+    char                *src;
+    static char         optstring[] = OPT_STRING;
 
-	BOOL				sourceIsIcns = NO;
-	BOOL				sourceIsImage = NO;
+    BOOL                sourceIsIcns = NO;
+    BOOL                sourceIsImage = NO;
 
-    while ( (optch = getopt(argc, (char * const *)argv, optstring)) != -1)
+    while ((optch = getopt(argc, (char * const *)argv, optstring)) != -1)
     {
         switch(optch)
         {
@@ -69,89 +69,89 @@ int main (int argc, const char * argv[])
                 return EX_OK;
                 break;
             case 'd':
-				sourceIsIcns = 1;
-				break;
-			case 'i':
-				sourceIsImage = 1;
-				break;
+                sourceIsIcns = 1;
+                break;
+            case 'i':
+                sourceIsImage = 1;
+                break;
             default: // '?'
                 rc = 1;
                 PrintHelp();
                 return EX_USAGE;
         }
     }
-	
-	if (sourceIsIcns && sourceIsImage)
-	{
-		fprintf(stderr, "%s: Both -i and -d parameters specified.\nSource cannot both be icns and image", PROGRAM_STRING);
+    
+    if (sourceIsIcns && sourceIsImage)
+    {
+        fprintf(stderr, "%s: Both -i and -d parameters specified.\nSource cannot both be icns and image", PROGRAM_STRING);
         PrintHelp();
         return EX_USAGE;
-	}
+    }
 
-	//check if a correct number of arguments was submitted
+    //check if a correct number of arguments was submitted
     if (argc < 3)
     {
         fprintf(stderr, "%s: Too few arguments.\n", PROGRAM_STRING);
         PrintHelp();
-		return EX_USAGE;
+        return EX_USAGE;
     }
-	
-	src = (char *)argv[optind];
+    
+    src = (char *)argv[optind];
 
-	//get the icon
-	IconFamily *icon;
-	NSString *srcPath = [NSString stringWithCString: src encoding: [NSString defaultCStringEncoding]];
-	
-	if (sourceIsIcns)
-	{
-		icon = [IconFamily iconFamilyWithContentsOfFile: srcPath];
-		if (icon == NULL)
-		{
-			fprintf(stderr, "Failed to read icns file '%s'.\n", src);
-			return EXIT_FAILURE;
-		}
-	}
-	else if (sourceIsImage)
-	{
-		NSImage *image = [[NSImage alloc] initWithContentsOfFile: srcPath];
-		if (image == NULL)
-		{
-			fprintf(stderr, "Failed to read image file '%s'.\n", src);
-			return EXIT_FAILURE;
-		}
-		
-		icon = [IconFamily iconFamilyWithThumbnailsOfImage: image];
-		if (icon == NULL)
-		{
-			fprintf(stderr, "Failed to generate icon from image.\n");
-			return EXIT_FAILURE;
-		}
-		
-		[image release];
-	}
-	else
-	{
-		icon = [IconFamily iconFamilyWithIconOfFile: srcPath];
-		if (icon == NULL)
-		{
-			fprintf(stderr, "Failed to get icon of file '%s'.\n", src);
-			return EXIT_FAILURE;
-		}
-	}
-	
-	//all remaining arguments should be files
-	// these get their icon set to the icon we just retrieved
+    //get the icon
+    IconFamily *icon;
+    NSString *srcPath = [NSString stringWithCString: src encoding: [NSString defaultCStringEncoding]];
+    
+    if (sourceIsIcns)
+    {
+        icon = [IconFamily iconFamilyWithContentsOfFile: srcPath];
+        if (icon == NULL)
+        {
+            fprintf(stderr, "Failed to read icns file '%s'.\n", src);
+            return EXIT_FAILURE;
+        }
+    }
+    else if (sourceIsImage)
+    {
+        NSImage *image = [[NSImage alloc] initWithContentsOfFile: srcPath];
+        if (image == NULL)
+        {
+            fprintf(stderr, "Failed to read image file '%s'.\n", src);
+            return EXIT_FAILURE;
+        }
+        
+        icon = [IconFamily iconFamilyWithThumbnailsOfImage: image];
+        if (icon == NULL)
+        {
+            fprintf(stderr, "Failed to generate icon from image.\n");
+            return EXIT_FAILURE;
+        }
+        
+        [image release];
+    }
+    else
+    {
+        icon = [IconFamily iconFamilyWithIconOfFile: srcPath];
+        if (icon == NULL)
+        {
+            fprintf(stderr, "Failed to get icon of file '%s'.\n", src);
+            return EXIT_FAILURE;
+        }
+    }
+    
+    //all remaining arguments should be files
+    // these get their icon set to the icon we just retrieved
     for (; optind < argc; ++optind)
-	{
-		BOOL isDir;
-		NSString *dstPath = [NSString stringWithCString: (char *)argv[optind] encoding: [NSString defaultCStringEncoding]];
-		
-		if ([[NSFileManager defaultManager] fileExistsAtPath: dstPath isDirectory: &isDir] && isDir)
-			[icon setAsCustomIconForDirectory: dstPath];
-		else
-			[icon setAsCustomIconForFile: dstPath];
-	}
-	
+    {
+        BOOL isDir;
+        NSString *dstPath = [NSString stringWithCString: (char *)argv[optind] encoding: [NSString defaultCStringEncoding]];
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath: dstPath isDirectory: &isDir] && isDir)
+            [icon setAsCustomIconForDirectory: dstPath];
+        else
+            [icon setAsCustomIconForFile: dstPath];
+    }
+    
     [pool drain];
     return EX_OK;
 }

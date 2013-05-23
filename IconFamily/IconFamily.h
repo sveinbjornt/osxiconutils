@@ -118,7 +118,7 @@
 //       for some as yet unknown reason.  (If you then assign the icon family
 //       as a file's custom icon using -setAsCustomIconForFile:, the custom
 //       icon doesn't appear for the file in the Finder.)  However, both
-//	 custom icon display and mouse-click hit-testing in the Finder seem to
+//     custom icon display and mouse-click hit-testing in the Finder seem to
 //       work fine when we only set the other four elements (thus keeping the
 //       existing kLarge1BitMask from the valid icon family from which we
 //       initialized the IconFamily via -initWithContentsOfFile:, since
