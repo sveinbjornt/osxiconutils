@@ -9,41 +9,58 @@
 /* Begin PBXBuildFile section */
 		F4807A720FCF606C00A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
 		F4807A730FCF606C00A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
-		F4807B450FCF60AF00A25839 /* pic2icns.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A540FCF5F3200A25839 /* pic2icns.m */; };
 		F4807B480FCF60CE00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B490FCF60CE00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
-		F4807B540FCF60EC00A25839 /* seticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A4D0FCF5F3200A25839 /* seticon.m */; };
 		F4807B550FCF60EC00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B560FCF60EC00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
 		F4807B570FCF60F400A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4807B580FCF60F400A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
-		F4807B620FCF610E00A25839 /* geticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A4B0FCF5F3200A25839 /* geticon.m */; };
 		F4807B630FCF610E00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B640FCF610E00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
 		F4807B650FCF611500A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4807B660FCF611500A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
-		F4E77EFF0FCF652800CAF741 /* icns2pic.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A490FCF5F3200A25839 /* icns2pic.m */; };
-		F4E77F000FCF652800CAF741 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
-		F4E77F010FCF652800CAF741 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
+		F4CFA1231F69C18E00470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
+		F4CFA1241F69C19200470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
+		F4CFA1251F69C19500470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
+		F4CFA1261F69C19900470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
+		F4CFA12F1F7C248200470945 /* icns2image.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A490FCF5F3200A25839 /* icns2image.m */; };
+		F4CFA1301F7C248C00470945 /* image2icns.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A540FCF5F3200A25839 /* image2icns.m */; };
+		F4CFA1311F7C249700470945 /* seticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A4D0FCF5F3200A25839 /* seticon.m */; };
+		F4CFA1321F7C24A100470945 /* geticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A4B0FCF5F3200A25839 /* geticon.m */; };
+		F4CFA1351F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
+		F4CFA1361F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
+		F4CFA1371F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
+		F4CFA1381F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
 		F4E77F020FCF653100CAF741 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4E77F030FCF653100CAF741 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F4807A490FCF5F3200A25839 /* icns2pic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icns2pic.m; sourceTree = "<group>"; };
+		F4807A490FCF5F3200A25839 /* icns2image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icns2image.m; sourceTree = "<group>"; };
 		F4807A4B0FCF5F3200A25839 /* geticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = geticon.m; sourceTree = "<group>"; };
 		F4807A4D0FCF5F3200A25839 /* seticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = seticon.m; sourceTree = "<group>"; };
 		F4807A4F0FCF5F3200A25839 /* IconFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconFamily.h; sourceTree = "<group>"; };
 		F4807A500FCF5F3200A25839 /* IconFamily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconFamily.m; sourceTree = "<group>"; };
 		F4807A510FCF5F3200A25839 /* NSString+CarbonFSRefCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CarbonFSRefCreation.h"; sourceTree = "<group>"; };
 		F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CarbonFSRefCreation.m"; sourceTree = "<group>"; };
-		F4807A540FCF5F3200A25839 /* pic2icns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pic2icns.m; sourceTree = "<group>"; };
-		F4807A5A0FCF5F5700A25839 /* pic2icns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pic2icns; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4807A540FCF5F3200A25839 /* image2icns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = image2icns.m; sourceTree = "<group>"; };
+		F4807A5A0FCF5F5700A25839 /* image2icns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = image2icns; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4807A700FCF606C00A25839 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		F4807A710FCF606C00A25839 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		F4807B500FCF60DC00A25839 /* seticon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = seticon; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4807B5E0FCF610100A25839 /* geticon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = geticon; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4E77EE40FCF64A300CAF741 /* icns2pic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = icns2pic; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CFA1221F69C18E00470945 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F4CFA1331F7C250100470945 /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
+		F4CFA1341F7C250100470945 /* CLI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLI.m; sourceTree = "<group>"; };
+		F4CFA1391F7C25C500470945 /* icns2image.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = icns2image.1; sourceTree = "<group>"; };
+		F4CFA13A1F7C25CE00470945 /* image2icns.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = image2icns.1; sourceTree = "<group>"; };
+		F4CFA13B1F7C25D400470945 /* geticon.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = geticon.1; sourceTree = "<group>"; };
+		F4CFA13C1F7C25D900470945 /* seticon.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = seticon.1; sourceTree = "<group>"; };
+		F4CFA1411F7C261A00470945 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F4CFA1421F7C263900470945 /* man2html.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = man2html.sh; sourceTree = "<group>"; };
+		F4CFA1431F7C263900470945 /* upload_man_html.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upload_man_html.sh; sourceTree = "<group>"; };
+		F4CFA1441F7C2A4B00470945 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F4E77EE40FCF64A300CAF741 /* icns2image */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = icns2image; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CFA1261F69C19900470945 /* Accelerate.framework in Frameworks */,
 				F4807A720FCF606C00A25839 /* Cocoa.framework in Frameworks */,
 				F4807A730FCF606C00A25839 /* Carbon.framework in Frameworks */,
 			);
@@ -60,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CFA1251F69C19500470945 /* Accelerate.framework in Frameworks */,
 				F4807B570FCF60F400A25839 /* Carbon.framework in Frameworks */,
 				F4807B580FCF60F400A25839 /* Cocoa.framework in Frameworks */,
 			);
@@ -69,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CFA1241F69C19200470945 /* Accelerate.framework in Frameworks */,
 				F4807B650FCF611500A25839 /* Carbon.framework in Frameworks */,
 				F4807B660FCF611500A25839 /* Cocoa.framework in Frameworks */,
 			);
@@ -78,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CFA1231F69C18E00470945 /* Accelerate.framework in Frameworks */,
 				F4E77F020FCF653100CAF741 /* Carbon.framework in Frameworks */,
 				F4E77F030FCF653100CAF741 /* Cocoa.framework in Frameworks */,
 			);
@@ -89,38 +110,17 @@
 		F4807A340FCF5F1C00A25839 = {
 			isa = PBXGroup;
 			children = (
-				F4807A480FCF5F3200A25839 /* icns2pic */,
-				F4807A4A0FCF5F3200A25839 /* geticon */,
-				F4807A4C0FCF5F3200A25839 /* seticon */,
-				F4807A530FCF5F3200A25839 /* pic2icns */,
-				F4807A4E0FCF5F3200A25839 /* IconFamily */,
+				F4CFA1411F7C261A00470945 /* README.md */,
+				F4CFA1421F7C263900470945 /* man2html.sh */,
+				F4CFA1431F7C263900470945 /* upload_man_html.sh */,
+				F4CFA13D1F7C25FC00470945 /* icns2image */,
+				F4CFA13E1F7C260200470945 /* image2icns */,
+				F4CFA13F1F7C260800470945 /* geticon */,
+				F4CFA1401F7C260F00470945 /* seticon */,
+				F4CFA12E1F6DCF8500470945 /* Shared */,
 				F4807B3A0FCF607100A25839 /* Frameworks */,
 				F4807A5B0FCF5F5700A25839 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		F4807A480FCF5F3200A25839 /* icns2pic */ = {
-			isa = PBXGroup;
-			children = (
-				F4807A490FCF5F3200A25839 /* icns2pic.m */,
-			);
-			path = icns2pic;
-			sourceTree = "<group>";
-		};
-		F4807A4A0FCF5F3200A25839 /* geticon */ = {
-			isa = PBXGroup;
-			children = (
-				F4807A4B0FCF5F3200A25839 /* geticon.m */,
-			);
-			path = geticon;
-			sourceTree = "<group>";
-		};
-		F4807A4C0FCF5F3200A25839 /* seticon */ = {
-			isa = PBXGroup;
-			children = (
-				F4807A4D0FCF5F3200A25839 /* seticon.m */,
-			);
-			path = seticon;
 			sourceTree = "<group>";
 		};
 		F4807A4E0FCF5F3200A25839 /* IconFamily */ = {
@@ -134,21 +134,13 @@
 			path = IconFamily;
 			sourceTree = "<group>";
 		};
-		F4807A530FCF5F3200A25839 /* pic2icns */ = {
-			isa = PBXGroup;
-			children = (
-				F4807A540FCF5F3200A25839 /* pic2icns.m */,
-			);
-			path = pic2icns;
-			sourceTree = "<group>";
-		};
 		F4807A5B0FCF5F5700A25839 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4807A5A0FCF5F5700A25839 /* pic2icns */,
+				F4807A5A0FCF5F5700A25839 /* image2icns */,
 				F4807B500FCF60DC00A25839 /* seticon */,
 				F4807B5E0FCF610100A25839 /* geticon */,
-				F4E77EE40FCF64A300CAF741 /* icns2pic */,
+				F4E77EE40FCF64A300CAF741 /* icns2image */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,18 +148,66 @@
 		F4807B3A0FCF607100A25839 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4CFA1221F69C18E00470945 /* Accelerate.framework */,
 				F4807A700FCF606C00A25839 /* Cocoa.framework */,
 				F4807A710FCF606C00A25839 /* Carbon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F4CFA12E1F6DCF8500470945 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F4CFA1441F7C2A4B00470945 /* Common.h */,
+				F4CFA1331F7C250100470945 /* CLI.h */,
+				F4CFA1341F7C250100470945 /* CLI.m */,
+				F4807A4E0FCF5F3200A25839 /* IconFamily */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		F4CFA13D1F7C25FC00470945 /* icns2image */ = {
+			isa = PBXGroup;
+			children = (
+				F4807A490FCF5F3200A25839 /* icns2image.m */,
+				F4CFA1391F7C25C500470945 /* icns2image.1 */,
+			);
+			name = icns2image;
+			sourceTree = "<group>";
+		};
+		F4CFA13E1F7C260200470945 /* image2icns */ = {
+			isa = PBXGroup;
+			children = (
+				F4807A540FCF5F3200A25839 /* image2icns.m */,
+				F4CFA13A1F7C25CE00470945 /* image2icns.1 */,
+			);
+			name = image2icns;
+			sourceTree = "<group>";
+		};
+		F4CFA13F1F7C260800470945 /* geticon */ = {
+			isa = PBXGroup;
+			children = (
+				F4807A4B0FCF5F3200A25839 /* geticon.m */,
+				F4CFA13B1F7C25D400470945 /* geticon.1 */,
+			);
+			name = geticon;
+			sourceTree = "<group>";
+		};
+		F4CFA1401F7C260F00470945 /* seticon */ = {
+			isa = PBXGroup;
+			children = (
+				F4807A4D0FCF5F3200A25839 /* seticon.m */,
+				F4CFA13C1F7C25D900470945 /* seticon.1 */,
+			);
+			name = seticon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4807A590FCF5F5700A25839 /* pic2icns */ = {
+		F4807A590FCF5F5700A25839 /* image2icns */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4807A5F0FCF5F5700A25839 /* Build configuration list for PBXNativeTarget "pic2icns" */;
+			buildConfigurationList = F4807A5F0FCF5F5700A25839 /* Build configuration list for PBXNativeTarget "image2icns" */;
 			buildPhases = (
 				F4807A570FCF5F5700A25839 /* Sources */,
 				F4807A580FCF5F5700A25839 /* Frameworks */,
@@ -176,9 +216,9 @@
 			);
 			dependencies = (
 			);
-			name = pic2icns;
-			productName = pic2icns;
-			productReference = F4807A5A0FCF5F5700A25839 /* pic2icns */;
+			name = image2icns;
+			productName = image2icns;
+			productReference = F4807A5A0FCF5F5700A25839 /* image2icns */;
 			productType = "com.apple.product-type.tool";
 		};
 		F4807B4F0FCF60DC00A25839 /* seticon */ = {
@@ -213,9 +253,9 @@
 			productReference = F4807B5E0FCF610100A25839 /* geticon */;
 			productType = "com.apple.product-type.tool";
 		};
-		F4E77EE30FCF64A300CAF741 /* icns2pic */ = {
+		F4E77EE30FCF64A300CAF741 /* icns2image */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4E77EF50FCF650500CAF741 /* Build configuration list for PBXNativeTarget "icns2pic" */;
+			buildConfigurationList = F4E77EF50FCF650500CAF741 /* Build configuration list for PBXNativeTarget "icns2image" */;
 			buildPhases = (
 				F4E77EE10FCF64A300CAF741 /* Sources */,
 				F4E77EE20FCF64A300CAF741 /* Frameworks */,
@@ -224,9 +264,9 @@
 			);
 			dependencies = (
 			);
-			name = icns2pic;
-			productName = icns2pic;
-			productReference = F4E77EE40FCF64A300CAF741 /* icns2pic */;
+			name = icns2image;
+			productName = icns2image;
+			productReference = F4E77EE40FCF64A300CAF741 /* icns2image */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +275,7 @@
 		F4807A360FCF5F1C00A25839 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0830;
 			};
 			buildConfigurationList = F4807A390FCF5F1C00A25839 /* Build configuration list for PBXProject "osxiconutils" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -249,10 +289,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4807A590FCF5F5700A25839 /* pic2icns */,
+				F4E77EE30FCF64A300CAF741 /* icns2image */,
+				F4807A590FCF5F5700A25839 /* image2icns */,
 				F4807B4F0FCF60DC00A25839 /* seticon */,
 				F4807B5D0FCF610100A25839 /* geticon */,
-				F4E77EE30FCF64A300CAF741 /* icns2pic */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4807B450FCF60AF00A25839 /* pic2icns.m in Sources */,
+				F4CFA1361F7C250100470945 /* CLI.m in Sources */,
+				F4CFA1301F7C248C00470945 /* image2icns.m in Sources */,
 				F4807B480FCF60CE00A25839 /* IconFamily.m in Sources */,
 				F4807B490FCF60CE00A25839 /* NSString+CarbonFSRefCreation.m in Sources */,
 			);
@@ -272,7 +313,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4807B540FCF60EC00A25839 /* seticon.m in Sources */,
+				F4CFA1371F7C250100470945 /* CLI.m in Sources */,
+				F4CFA1311F7C249700470945 /* seticon.m in Sources */,
 				F4807B550FCF60EC00A25839 /* IconFamily.m in Sources */,
 				F4807B560FCF60EC00A25839 /* NSString+CarbonFSRefCreation.m in Sources */,
 			);
@@ -282,7 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4807B620FCF610E00A25839 /* geticon.m in Sources */,
+				F4CFA1381F7C250100470945 /* CLI.m in Sources */,
+				F4CFA1321F7C24A100470945 /* geticon.m in Sources */,
 				F4807B630FCF610E00A25839 /* IconFamily.m in Sources */,
 				F4807B640FCF610E00A25839 /* NSString+CarbonFSRefCreation.m in Sources */,
 			);
@@ -292,9 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4E77EFF0FCF652800CAF741 /* icns2pic.m in Sources */,
-				F4E77F000FCF652800CAF741 /* IconFamily.m in Sources */,
-				F4E77F010FCF652800CAF741 /* NSString+CarbonFSRefCreation.m in Sources */,
+				F4CFA1351F7C250100470945 /* CLI.m in Sources */,
+				F4CFA12F1F7C248200470945 /* icns2image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,19 +346,33 @@
 		F4807A370FCF5F1C00A25839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_UNROLL_LOOPS = NO;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3.9;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET_i386 = "";
+				MACOSX_DEPLOYMENT_TARGET_ppc = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = macosx;
 			};
@@ -325,8 +381,9 @@
 		F4807A5D0FCF5F5700A25839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -338,7 +395,7 @@
 					"-framework",
 					AppKit,
 				);
-				PRODUCT_NAME = pic2icns;
+				PRODUCT_NAME = image2icns;
 				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
@@ -346,6 +403,7 @@
 		F4807B520FCF60DD00A25839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_MODEL_TUNING = G5;
@@ -368,6 +426,7 @@
 		F4807B600FCF610200A25839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_MODEL_TUNING = G5;
@@ -390,23 +449,18 @@
 		F4E77EE60FCF64A300CAF741 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PRODUCT_NAME = icns2pic;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = icns2image;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -421,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4807A5F0FCF5F5700A25839 /* Build configuration list for PBXNativeTarget "pic2icns" */ = {
+		F4807A5F0FCF5F5700A25839 /* Build configuration list for PBXNativeTarget "image2icns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4807A5D0FCF5F5700A25839 /* Release */,
@@ -445,7 +499,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4E77EF50FCF650500CAF741 /* Build configuration list for PBXNativeTarget "icns2pic" */ = {
+		F4E77EF50FCF650500CAF741 /* Build configuration list for PBXNativeTarget "icns2image" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4E77EE60FCF64A300CAF741 /* Release */,

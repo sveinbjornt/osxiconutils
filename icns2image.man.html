@@ -1,0 +1,47 @@
+<html><head></head><body><pre><font face="Courier">
+<b>SHOW(1)                   BSD General Commands Manual                  SHOW(1)</b>
+
+<b>NAME</b>
+
+     <b>icns2image</b> &#x2014; Convert Apple icns file to image
+
+<b>SYNOPSIS</b>
+
+     <b>icns2image</b> [&#x2212;<b>vh</b>] [&#x2212;<b>t</b> <u>format</u>] <u>source</u> <u>destination</u>
+
+<b>DESCRIPTION</b>
+
+     <b>icns2image</b> is a command line tool to create an image from a Mac OS X icns
+     file
+
+     The following flags are supported:
+
+     &#x2212;<b>r,</b> &#x2212;&#x2010;<b>representation</b>
+              Specify representation size to convert (e.g. 512, 128, &#x2019;all&#x2019;).
+
+     &#x2212;<b>t,</b> &#x2212;&#x2010;<b>type</b>
+              Specify output image format (e.g. jpeg, png, bmp, tiff)
+
+     &#x2212;<b>v,</b> &#x2212;&#x2010;<b>version</b>
+              Print program version and exit
+
+     &#x2212;<b>h,</b> &#x2212;&#x2010;<b>help</b>
+              Print help and exit
+
+<b>EXAMPLES</b>
+
+     icns2image &#x2010;t jpeg source.icns source.jpg
+
+     icns2image icon.icns icon.png
+
+<b>SEE ALSO</b>
+
+     geticon(1), iconutil(1), image2icns(1), seticon(1)
+
+<b>AUTHORS</b>
+
+     Sveinbjorn Thordarson &lt;sveinbjornt@gmail.com&gt;
+
+Darwin                           Sep 30, 2006                           Darwin
+</font></pre>
+</body></html>

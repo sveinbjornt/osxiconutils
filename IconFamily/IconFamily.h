@@ -1,7 +1,7 @@
 // IconFamily.h
 // IconFamily class interface
-// by Troy Stephens, Thomas Schnitzer, David Remahl, Nathan Day, Ben Haller, Sven Janssen, Peter Hosey, Conor Dearden, Elliot Glaysher, and Dave MacLachlan
-// version 0.9.3
+// by Troy Stephens, Thomas Schnitzer, David Remahl, Nathan Day, Ben Haller, Sven Janssen, Peter Hosey, Conor Dearden, Elliot Glaysher, Dave MacLachlan, and Sveinbjorn Thordarson
+// version 0.9.4
 //
 // Project Home Page:
 //   http://iconfamily.sourceforge.net/
@@ -9,7 +9,7 @@
 // Problems, shortcomings, and uncertainties that I'm aware of are flagged with "NOTE:".  Please address bug reports, bug fixes, suggestions, etc. to the project Forums and bug tracker at https://sourceforge.net/projects/iconfamily/
 
 /*
-    Copyright (c) 2001-2006 Troy N. Stephens
+    Copyright (c) 2001-2010 Troy N. Stephens
     Portions Copyright (c) 2007 Google Inc.
 
     Use and distribution of this source code is governed by the MIT License, whose terms are as follows.
@@ -38,7 +38,15 @@
 // You can also write an icon family to an .icns file using the -writeToFile:
 // method.
 
-@interface IconFamily : NSObject
+enum {
+	kIconServices512RetinaPixelDataARGB = 'ic10', /* non-premultiplied 1024x1024 ARGB bitmap*/
+    kIconServices256RetinaPixelDataARGB = 'ic14', /* non-premultiplied 512x512 ARGB bitmap*/
+    kIconServices128RetinaPixelDataARGB = 'ic13', /* non-premultiplied 256x256 ARGB bitmap*/
+    kIconServices32RetinaPixelDataARGB  = 'ic12', /* non-premultiplied 64x64 ARGB bitmap*/
+    kIconServices16RetinaPixelDataARGB  = 'ic11'  /* non-premultiplied 32x32 ARGB bitmap*/
+};
+
+@interface IconFamily : NSObject <NSPasteboardReading, NSPasteboardWriting>
 {
     IconFamilyHandle hIconFamily;
 }
@@ -118,7 +126,7 @@
 //       for some as yet unknown reason.  (If you then assign the icon family
 //       as a file's custom icon using -setAsCustomIconForFile:, the custom
 //       icon doesn't appear for the file in the Finder.)  However, both
-//     custom icon display and mouse-click hit-testing in the Finder seem to
+//	 custom icon display and mouse-click hit-testing in the Finder seem to
 //       work fine when we only set the other four elements (thus keeping the
 //       existing kLarge1BitMask from the valid icon family from which we
 //       initialized the IconFamily via -initWithContentsOfFile:, since
@@ -162,11 +170,13 @@
 
 - (BOOL) setAsCustomIconForFile:(NSString*)path;
 - (BOOL) setAsCustomIconForFile:(NSString*)path withCompatibility:(BOOL)compat;
+- (BOOL) setAsCustomIconForFile:(NSString*)path withCompatibility:(BOOL)compat error:(NSError **)error;
 
 // Same as the -setAsCustomIconForFile:... methods, but for folders (directories).
 
 - (BOOL) setAsCustomIconForDirectory:(NSString*)path;
 - (BOOL) setAsCustomIconForDirectory:(NSString*)path withCompatibility:(BOOL)compat;
+- (BOOL) setAsCustomIconForDirectory:(NSString*)path withCompatibility:(BOOL)compat error:(NSError **)error;
 
 // Removes the custom icon (if any) from the specified file's resource fork,
 // and clears the necessary Finder bits for the file.  (Note that this is a
@@ -174,13 +184,12 @@
 
 + (BOOL) removeCustomIconFromFile:(NSString*)path;
 
-@end
+//Same as the -removeCustomIconFromFile: method, but for folders (directories).
 
-// Methods for interfacing with the Carbon Scrap Manager (analogous to and
-// interoperable with the Cocoa Pasteboard).
-@interface IconFamily (ScrapAdditions)
-+ (BOOL) canInitWithScrap;
-+ (IconFamily*) iconFamilyWithScrap;
-- initWithScrap;
-- (BOOL) putOnScrap;
++ (BOOL) removeCustomIconFromDirectory:(NSString*)path;
++ (BOOL) removeCustomIconFromDirectory:(NSString*)path error:(NSError **)error;
+
+- (NSData *)data;
++ (BOOL)canInitWithPasteboard:(NSPasteboard *)pasteboard;
+
 @end
