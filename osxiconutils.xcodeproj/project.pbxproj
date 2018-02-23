@@ -8,16 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F4807A720FCF606C00A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
-		F4807A730FCF606C00A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4807B480FCF60CE00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B490FCF60CE00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
 		F4807B550FCF60EC00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B560FCF60EC00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
-		F4807B570FCF60F400A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4807B580FCF60F400A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
 		F4807B630FCF610E00A25839 /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A500FCF5F3200A25839 /* IconFamily.m */; };
 		F4807B640FCF610E00A25839 /* NSString+CarbonFSRefCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4807A520FCF5F3200A25839 /* NSString+CarbonFSRefCreation.m */; };
-		F4807B650FCF611500A25839 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4807B660FCF611500A25839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
 		F4CFA1231F69C18E00470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
 		F4CFA1241F69C19200470945 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CFA1221F69C18E00470945 /* Accelerate.framework */; };
@@ -31,7 +28,6 @@
 		F4CFA1361F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
 		F4CFA1371F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
 		F4CFA1381F7C250100470945 /* CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CFA1341F7C250100470945 /* CLI.m */; };
-		F4E77F020FCF653100CAF741 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A710FCF606C00A25839 /* Carbon.framework */; };
 		F4E77F030FCF653100CAF741 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4807A700FCF606C00A25839 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +42,10 @@
 		F4807A540FCF5F3200A25839 /* image2icns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = image2icns.m; sourceTree = "<group>"; };
 		F4807A5A0FCF5F5700A25839 /* image2icns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = image2icns; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4807A700FCF606C00A25839 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		F4807A710FCF606C00A25839 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		F4807B500FCF60DC00A25839 /* seticon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = seticon; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4807B5E0FCF610100A25839 /* geticon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = geticon; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4856ACC20409F2500F82E72 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F4856ACD2040A44400F82E72 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		F4CFA1221F69C18E00470945 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		F4CFA1331F7C250100470945 /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
 		F4CFA1341F7C250100470945 /* CLI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLI.m; sourceTree = "<group>"; };
@@ -70,7 +67,6 @@
 			files = (
 				F4CFA1261F69C19900470945 /* Accelerate.framework in Frameworks */,
 				F4807A720FCF606C00A25839 /* Cocoa.framework in Frameworks */,
-				F4807A730FCF606C00A25839 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CFA1251F69C19500470945 /* Accelerate.framework in Frameworks */,
-				F4807B570FCF60F400A25839 /* Carbon.framework in Frameworks */,
 				F4807B580FCF60F400A25839 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +84,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CFA1241F69C19200470945 /* Accelerate.framework in Frameworks */,
-				F4807B650FCF611500A25839 /* Carbon.framework in Frameworks */,
 				F4807B660FCF611500A25839 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +93,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CFA1231F69C18E00470945 /* Accelerate.framework in Frameworks */,
-				F4E77F020FCF653100CAF741 /* Carbon.framework in Frameworks */,
 				F4E77F030FCF653100CAF741 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				F4CFA1411F7C261A00470945 /* README.md */,
+				F4856ACC20409F2500F82E72 /* LICENSE.txt */,
+				F4856ACD2040A44400F82E72 /* build.sh */,
 				F4CFA1421F7C263900470945 /* man2html.sh */,
 				F4CFA1431F7C263900470945 /* upload_man_html.sh */,
 				F4CFA13D1F7C25FC00470945 /* icns2image */,
@@ -150,7 +145,6 @@
 			children = (
 				F4CFA1221F69C18E00470945 /* Accelerate.framework */,
 				F4807A700FCF606C00A25839 /* Cocoa.framework */,
-				F4807A710FCF606C00A25839 /* Carbon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,7 +269,7 @@
 		F4807A360FCF5F1C00A25839 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = F4807A390FCF5F1C00A25839 /* Build configuration list for PBXProject "osxiconutils" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -346,12 +340,18 @@
 		F4807A370FCF5F1C00A25839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

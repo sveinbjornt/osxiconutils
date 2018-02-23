@@ -1,5 +1,5 @@
 /*
-    seticon - command line program to set the icon of one or more Mac OS X files
+    seticon - Mac command line program to set the custom icon of one or more files
 
     Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
     All rights reserved.
@@ -33,115 +33,41 @@
 #import <Cocoa/Cocoa.h>
 #import "CLI.h"
 #import "IconFamily.h"
-#include <sysexits.h>
-
-#define OPT_STRING            "vhdi" 
-
-static void PrintHelp (void);
+#import <sysexits.h>
 
 int main (int argc, const char * argv[]) { @autoreleasepool {
 
     NSApplication *app = [NSApplication sharedApplication]; // establish connection to window server
-    int rc, optch;
-    char *src;
-    static char optstring[] = OPT_STRING;
 
-    BOOL sourceIsIcns = NO;
-    BOOL sourceIsImage = NO;
+    NSMutableArray *args = ReadRemainingArgs(argc, argv);
 
-    while ((optch = getopt(argc, (char * const *)argv, optstring)) != -1) {
-        switch(optch) {
-            case 'v':
-                PrintProgramVersion();
-                return EX_OK;
-                break;
-            case 'h':
-                PrintHelp();
-                return EX_OK;
-                break;
-            case 'd':
-                sourceIsIcns = 1;
-                break;
-            case 'i':
-                sourceIsImage = 1;
-                break;
-            default: // '?'
-                rc = 1;
-                PrintHelp();
-                return EX_USAGE;
-        }
-    }
-
-    if (sourceIsIcns && sourceIsImage) {
-        fprintf(stderr, "%s: Both -i and -d parameters specified.\nSource cannot both be icns and image", PROGRAM_STRING);
-        PrintHelp();
+    // check if we have the correct number of arguments
+    if ([args count] < 2) {
+        NSPrintErr(@"Missing arguments.");
+        NSPrintErr(@"usage: seticon iconFile [files ...]");
         return EX_USAGE;
     }
+    
+    NSString *iconFilePath = [args[0] stringByExpandingTildeInPath];
 
-    //check if a correct number of arguments was submitted
-    if (argc < 3) {
-        fprintf(stderr, "%s: Too few arguments.\n", PROGRAM_STRING);
-        PrintHelp();
-        return EX_USAGE;
+    // read icon
+    IconFamily *icon = [IconFamily iconFamilyWithContentsOfFile:iconFilePath];
+    if (icon == nil) {
+        NSPrintErr(@"Error reading icns file '%@'", iconFilePath);
+        return EXIT_FAILURE;
     }
 
-    src = (char *)argv[optind];
-
-    //get the icon
-    IconFamily *icon;
-    NSString *srcPath = [NSString stringWithCString: src encoding: [NSString defaultCStringEncoding]];
-
-    if (sourceIsIcns) {
-        icon = [IconFamily iconFamilyWithContentsOfFile: srcPath];
-        if (icon == nil) {
-            fprintf(stderr, "Failed to read icns file '%s'.\n", src);
-            return EXIT_FAILURE;
-        }
-    }
-    else if (sourceIsImage) {
-        NSImage *image = [[NSImage alloc] initWithContentsOfFile: srcPath];
-        if (image == nil) {
-            fprintf(stderr, "Failed to read image file '%s'.\n", src);
-            return EXIT_FAILURE;
-        }
-        
-        icon = [IconFamily iconFamilyWithThumbnailsOfImage: image];
-        if (icon == nil) {
-            fprintf(stderr, "Failed to generate icon from image.\n");
-            return EXIT_FAILURE;
-        }
-        
-    }
-    else {
-        icon = [IconFamily iconFamilyWithIconOfFile: srcPath];
-        if (icon == nil) {
-            fprintf(stderr, "Failed to get icon of file '%s'.\n", src);
-            return EXIT_FAILURE;
-        }
-    }
-
-    //all remaining arguments should be files
-    // these get their icon set to the icon we just retrieved
-    for (; optind < argc; ++optind) {
+    [args removeObjectAtIndex:0];
+    
+    // all remaining arguments should be the files we set the icon of
+    for (NSString *path in args) {
         BOOL isDir;
-        NSString *dstPath = [NSString stringWithCString: (char *)argv[optind] encoding: [NSString defaultCStringEncoding]];
-        
-        if ([[NSFileManager defaultManager] fileExistsAtPath: dstPath isDirectory: &isDir] && isDir) {
-            [icon setAsCustomIconForDirectory: dstPath];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir] && isDir) {
+            [icon setAsCustomIconForDirectory:path];
         } else {
-            [icon setAsCustomIconForFile: dstPath];
+            [icon setAsCustomIconForFile:path];
         }
     }
     
     return EX_OK;
 }}
-
-#pragma mark -
-
-static void PrintVersion (void) {
-    printf("%s v. %s\n", PROGRAM_STRING, VERSION_STRING);
-}
-
-static void PrintHelp (void) {
-    printf("usage: %s [-vhdi] [source] [file ...]\n", PROGRAM_STRING);
-}

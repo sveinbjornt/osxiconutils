@@ -1,5 +1,7 @@
-build/
 DerivedData
+build
+bin
+osxiconutils.zip
 
 ## Various settings
 *.pbxuser

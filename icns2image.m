@@ -1,5 +1,5 @@
 /*
-    icns2image - Mac OS X command line program to convert Apple icns files to images
+    icns2image - Mac command line program to convert an Apple icns file to a standard image format
 
     Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
     All rights reserved.
@@ -40,6 +40,7 @@ static struct option long_options[] = {
     {"version",     no_argument,        0,  'v'},
     {"help",        no_argument,        0,  'h'},
     {"type",        required_argument,  0,  't'},
+    {"rep",         required_argument,  0,  'r'},
     {0,             0,                  0,    0}
 };
 
@@ -58,13 +59,22 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
     while ((optch = getopt_long(argc, (char *const *)argv, optstring, long_options, &long_index)) != -1) {
         switch (optch) {
             
+            // specify icon representation size to convert to image, e.g. 128
             case 'r':
             {
                 NSString *repStr = @(optarg);
-                representation = [repStr intValue];
+                int num;
+                BOOL isInteger = [[NSScanner scannerWithString:repStr] scanInt:&num];
+                if (isInteger) {
+                    representation = [repStr intValue];
+                } else {
+                    NSPrintErr(@"Invalid representation size: '%@'", repStr);
+                    exit(EX_USAGE);
+                }
             }
                 break;
-                
+            
+            // image format
             case 't':
                 typeStr = @(optarg);
                 break;
@@ -88,7 +98,7 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
     NSMutableArray *args = ReadRemainingArgs(argc, argv);
     if ([args count] < 2) {
         PrintHelp();
-        return EX_USAGE;
+        exit(EX_USAGE);
     }
 
     NSString *srcPath = [args[0] stringByExpandingTildeInPath];
@@ -96,23 +106,23 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
     
     // make sure source file exists
     if (![[NSFileManager defaultManager] fileExistsAtPath:srcPath]) {
-        NSPrintErr(@"File '%@' does not exist\n", srcPath);
-        return EXIT_FAILURE;
+        NSPrintErr(@"File '%@' does not exist", srcPath);
+        exit(EXIT_FAILURE);
     }
     
     // make sure destination path is writable
     if ([[NSFileManager defaultManager] fileExistsAtPath:destPath] &&
         ![[NSFileManager defaultManager] isWritableFileAtPath:destPath]) {
-        NSPrintErr(@"Cannot write to path '%@'\n", destPath);
-        return EX_CANTCREAT;
+        NSPrintErr(@"Cannot write to path '%@'", destPath);
+        exit(EX_CANTCREAT);
     }
     
     // read icon from source file
     NSImage *img = [[NSImage alloc] initWithContentsOfFile:srcPath];
     NSArray *reps = [img representations];
     if (img == nil || [reps count] == 0) {
-        NSPrintErr(@"Error reading icon from file\n");
-        return EXIT_FAILURE;
+        NSPrintErr(@"Error reading icon from file");
+        exit(EXIT_FAILURE);
     }
     
     NSBitmapImageRep *wantedRep;
@@ -129,6 +139,7 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
         }
         if (representation && [brep pixelsWide] == representation) {
             wantedRep = brep;
+            break;
         }
     }
     
@@ -141,17 +152,19 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
     }
     
     // determine image output format
+    BOOL imgTypeSpecifiedWithFlag = NO;
     NSUInteger imgType = NSTIFFFileType;
     if (typeStr) {
         imgType = ImageTypeForSuffix(typeStr);
-        if (!imgType) {
+        if (imgType == -1) {
             NSPrintErr(@"Invalid image type: %@", typeStr);
         }
+        imgTypeSpecifiedWithFlag = YES;
     }
-    if (!imgType) {
-        NSString *suffix = [destPath lastPathComponent];
-        imgType = ImageTypeForSuffix(typeStr);
-        if (!imgType) {
+    if (!imgTypeSpecifiedWithFlag) {
+        NSString *suffix = [[destPath lastPathComponent] pathExtension];
+        imgType = ImageTypeForSuffix(suffix);
+        if (imgType == -1) {
             NSPrintErr(@"Unable to determine image type from suffix '%@', falling back to TIFF", suffix);
             imgType = NSTIFFFileType;
         }
@@ -161,12 +174,12 @@ int main(int argc, const char * argv[]) { @autoreleasepool {
     NSData *data = [wantedRep representationUsingType:imgType properties:prop];
     if (data == nil) {
         NSPrintErr(@"Error creating image data for type %d", imgType);
-        return EX_DATAERR;
+        exit(EX_DATAERR);
     }
 
     if ([data writeToFile:destPath atomically:YES] == NO) {
         NSPrintErr(@"Error writing image to destination");
-        return EX_IOERR;
+        exit(EX_IOERR);
     }
     
     return EXIT_SUCCESS;
@@ -179,17 +192,17 @@ static NSUInteger ImageTypeForSuffix(NSString *suffix) {
                             @"png":  @(NSPNGFileType),
                             @"gif":  @(NSGIFFileType),
                             @"tiff": @(NSTIFFFileType),
-                            @"bmp":  @(NSBMPFileType)    };
+                            @"bmp":  @(NSBMPFileType)   };
     
     NSString *s = [suffix lowercaseString];
     NSNumber *imgTypeNum = map[s];
     if (!imgTypeNum) {
-        return 0;
+        return -1;
     }
     
     return [imgTypeNum unsignedIntegerValue];
 }
 
 static void PrintHelp(void) {
-    NSPrintErr(@"usage: icns2image src dest\n");
+    NSPrintErr(@"usage: icns2image src dest");
 }

@@ -1,5 +1,5 @@
 /*
-    image2icns - Mac OS X command line program to convert images to Apple icns files
+    image2icns - Mac command line program to convert images to Apple icns files
 
     Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
     All rights reserved.
@@ -37,7 +37,7 @@
 int main (int argc, const char * argv[]) { @autoreleasepool {
 
     if (argc < 3) {
-        NSPrintErr(@"usage: image2icns src dest\n");
+        NSPrintErr(@"usage: image2icns src dest");
         return EX_USAGE;
     }
 
@@ -46,27 +46,21 @@ int main (int argc, const char * argv[]) { @autoreleasepool {
 
     // make sure source file exists
     if (![[NSFileManager defaultManager] fileExistsAtPath:srcPath]) {
-        NSPrintErr(@"File '%@' does not exist\n", srcPath);
+        NSPrintErr(@"File '%@' does not exist", srcPath);
         return EXIT_FAILURE;
     }
 
     // get image from source file
     NSImage *img = [[NSImage alloc] initWithContentsOfFile:srcPath];
     if (img == nil) {
-        NSPrintErr(@"Could not read image from file '%@'\n", srcPath);
+        NSPrintErr(@"Could not read image from file '%@'", srcPath);
         return EXIT_FAILURE;
     }
 
     // create icon from image
     IconFamily *iconFam = [[IconFamily alloc] initWithThumbnailsOfImage:img];
     if (iconFam == nil)  {
-        NSPrintErr(@"Error generating icon data from image\n");
-        return EXIT_FAILURE;
-    }
-    
-    // make sure destination path is writable
-    if ((![[NSFileManager defaultManager] isWritableFileAtPath:destPath])) {
-        NSPrintErr(@"Cannot write to path '%@'\n", destPath);
+        NSPrintErr(@"Error generating icon data from image");
         return EXIT_FAILURE;
     }
     
@@ -74,10 +68,9 @@ int main (int argc, const char * argv[]) { @autoreleasepool {
 
     // make sure we were successful
     if (res == NO || ![[NSFileManager defaultManager] fileExistsAtPath:destPath]) {
-        NSPrintErr(@"Failed to create icon at path '%@'\n", destPath);
+        NSPrintErr(@"Failed to create icns file at path '%@'", destPath);
         return EXIT_FAILURE;
     }
     
     return EXIT_SUCCESS;
 }}
-

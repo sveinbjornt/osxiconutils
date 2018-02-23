@@ -52,7 +52,7 @@
 + (IconFamily*) iconFamily
 {
 #if !__has_feature(objc_arc)
-    return [[[IconFamily alloc] init] autorelease];
+    return [[IconFamily alloc] init] autorelease];
 #endif
     return [[IconFamily alloc] init];
 }
