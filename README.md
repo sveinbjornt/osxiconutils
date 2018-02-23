@@ -16,7 +16,7 @@ The suite contains the following tools:
 
 ## Download
 
-* [**Download osxutils binaries**](https://sveinbjorn.org/files/software/osxutils.zip) (~100 KB, Intel 64-bit, 10.6 or later)
+* [**Download osxutils binaries**](https://sveinbjorn.org/files/software/osxiconutils.zip) (~100 KB, Intel 64-bit, 10.6 or later)
 
 ## BSD License
 
