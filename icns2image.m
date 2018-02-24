@@ -32,7 +32,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CLI.h"
-#import "IconFamily.h"
 
 static const char optstring[] = "vht:r:";
 

@@ -52,6 +52,8 @@ build
 
 strip -x "${BUILD_DIR}/seticon"
 
+cp *.1 ${BUILD_DIR}/
+
 zip osxiconutils.zip ${BUILD_DIR}/*
 
 
