@@ -1,7 +1,7 @@
 /*
     image2icns - Mac command line program to convert images to Apple icns files
 
-    Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+    Copyright (c) 2003-2020, Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without modification,

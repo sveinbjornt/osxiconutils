@@ -1,7 +1,7 @@
 /*
     seticon - Mac command line program to set the custom icon of one or more files
 
-    Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+    Copyright (c) 2003-2020, Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without modification,

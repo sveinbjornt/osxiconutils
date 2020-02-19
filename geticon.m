@@ -1,7 +1,7 @@
 /*
     geticon - command line program to get the icon of a Mac file and save it as an image
 
-    Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+    Copyright (c) 2003-2020, Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without modification,
