@@ -2,7 +2,7 @@
 
 <img src="http://sveinbjorn.org/images/executable_icon.jpg" width="128" height="128" alt="executable icon" style="float: right; margin-left: 20px; margin-bottom: 20px;" align="right">
 
-**NB: No longer maintained by me. Fork and make it better. 
+**NB: No longer maintained by me. Fork and make it better. **
 
 `osxiconutils` is a suite of Mac command line utilities to get or set Mac OS X file icons, and convert to and from Apple's `icns` icon file format. Created a long time ago.
 
