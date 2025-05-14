@@ -8,7 +8,7 @@
 * [icnsutil Python library](https://github.com/relikd/icnsutil)
 * [createicns - command line icns generator](https://github.com/avl7771/createicns)
 * [icns - Rust crate to encode/decode icns files](https://lib.rs/crates/icns)
-* [icon_record_extractor - C lib to extract records from icns files]
+* [icon_record_extractor - C lib to extract records from icns files](https://github.com/nyteshade/icon_record_extractor)
 
 ----
 
