@@ -2,7 +2,17 @@
 
 <img src="http://sveinbjorn.org/images/executable_icon.jpg" width="128" height="128" alt="executable icon" style="float: right; margin-left: 20px; margin-bottom: 20px;" align="right">
 
-**NB: No longer maintained by me. Fork and make it better.**
+***No longer maintained. You may want to take a look at the following:***
+
+* [Apple's iconutil](https://www.unix.com/man_page/osx/1/iconutil)
+* [icnsutil Python library](https://github.com/relikd/icnsutil)
+* [createicns - command line icns generator](https://github.com/avl7771/createicns)
+* [icns - Rust crate to encode/decode icns files](https://lib.rs/crates/icns)
+* [icon_record_extractor - C lib to extract records from icns files]
+
+----
+
+***DEPRECATED - May work for you but caveat emptor!***
 
 `osxiconutils` is a suite of Mac command line utilities to get or set Mac OS X file icons, and convert to and from Apple's `icns` icon file format. Created a long time ago.
 
