@@ -12,7 +12,7 @@
 
 ----
 
-***DEPRECATED - May work for you but caveat emptor!***
+***No longer maintained. These tools may work for you but they are very old. Caveat emptor!***
 
 `osxiconutils` is a suite of Mac command line utilities to get or set Mac OS X file icons, and convert to and from Apple's `icns` icon file format. Created a long time ago.
 
