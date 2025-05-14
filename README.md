@@ -14,7 +14,7 @@
 
 ***No longer maintained. These tools may work for you but they are very old. Caveat emptor!***
 
-`osxiconutils` is a suite of Mac command line utilities to get or set Mac OS X file icons, and convert to and from Apple's `icns` icon file format. Created a long time ago.
+`osxiconutils` is a suite of Mac command line utilities to get or set Mac OS X file icons, and convert to and from Apple's `icns` icon file format. Created a long, long time ago.
 
 The suite contains the following tools:
 
@@ -28,7 +28,7 @@ The suite contains the following tools:
 
 ## Download
 
-* [**Download osxutils binaries**](https://sveinbjorn.org/files/software/osxiconutils.zip) (~100 KB, Intel 64-bit, 10.6 or later)
+* [**⬇ Download osxutils binaries**](https://sveinbjorn.org/files/software/osxiconutils.zip) (~100 KB, ARM/Intel 64-bit, 10.13 or later)
 
 ## BSD License
 
